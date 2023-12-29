@@ -233,7 +233,22 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6">
-              <form>
+              <!-- alert button click -->
+              <div
+                class="alert alert-success alert-dismissible fade show d-none my-alert"
+                role="alert"
+              >
+                <strong>Thank you</strong>
+                We have received your message!
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <form name="RIZKI-port-contact-form">
                 <div class="mb-3">
                   <label for="name" class="form-label">Full Name</label>
                   <input
@@ -241,6 +256,7 @@
                     class="form-control"
                     id="name"
                     aria-describedby="name"
+                    name="name"
                   />
                 </div>
 
@@ -251,6 +267,7 @@
                     class="form-control"
                     id="email"
                     aria-describedby="email"
+                    name="email"
                   />
                 </div>
 
@@ -261,10 +278,24 @@
                     id="message"
                     rows="3"
                     style="resize: none"
+                    name="message"
                   ></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary btn-kirim">
+                  Submit
+                </button>
+                <button
+                  class="btn btn-primary btn-loading d-none"
+                  type="button"
+                  disabled
+                >
+                  <span
+                    class="spinner-grow spinner-grow-sm"
+                    aria-hidden="true"
+                  ></span>
+                  <span role="status">Loading...</span>
+                </button>
               </form>
             </div>
           </div>
