@@ -17,6 +17,10 @@ form.addEventListener("submit", (e) => {
       // tampilkan button submit, hilangkan button Loading
       btnLoading.classList.toggle("d-none");
       btnKirim.classList.toggle("d-none");
+      //alert ketika pesan succes di kirim
+      myAlert.classList.toggle("d-none");
+      // reset form
+      form.reset();
       console.log("Success!", response);
     })
     .catch((error) => console.error("Error!", error.message));
